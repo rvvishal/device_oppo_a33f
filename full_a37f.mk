@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2016 The Android Open-Source Project
+# Copyright (C) 2015 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,12 @@
 # limitations under the License.
 #
 
-ifneq ($(filter a37f, $(TARGET_DEVICE)),)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-LOCAL_PATH := $(call my-dir)
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
-
-endif
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := a37f
+PRODUCT_NAME := full_a37f
+PRODUCT_BRAND := Oppo
+PRODUCT_MODEL := Oppo a37f
+PRODUCT_MANUFACTURER := Oppo
