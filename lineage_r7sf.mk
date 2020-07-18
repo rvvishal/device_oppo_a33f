@@ -20,21 +20,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from r7sf device
-$(call inherit-product, device/oppo/r7sf/device.mk)
+$(call inherit-product, device/oppo/a37f/device.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_r7sf
-PRODUCT_DEVICE := r7sf
+PRODUCT_NAME := lineage_a37f
+PRODUCT_DEVICE := a37f
 PRODUCT_BRAND := OPPO
-PRODUCT_MODEL := R7sf
+PRODUCT_MODEL := a37f
 PRODUCT_MANUFACTURER := OPPO
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="msm8916_64-user 6.0.1 MMB29M eng.root.20160522.010741 release-keys" \
-    TARGET_DEVICE="R7sf"
+    TARGET_DEVICE="a37f"
 
 BUILD_FINGERPRINT=OPPO/R7sfg/R7sf:6.0.1/MMB29M/1456473551:user/release-keys

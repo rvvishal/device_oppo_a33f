@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/oppo/r7sf
+LOCAL_PATH := device/oppo/a37f
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -58,7 +58,7 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=480
+    ro.sf.lcd_density=320
 
 # Factory reset protection
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -84,4 +84,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # Call the proprietary setup
-$(call inherit-product, vendor/oppo/r7sf/r7sf-vendor.mk)
+$(call inherit-product, vendor/oppo/a37f/a37f-vendor.mk)
