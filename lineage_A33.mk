@@ -16,28 +16,29 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_k.mk)
-$(call inherit-product, device/oppo/A37/device.mk)
+$(call inherit-product, device/oppo/A33/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := a37f,A37f,A37fw,a37fw,msm8916,msm8939
+TARGET_OTA_ASSERT_DEVICE := a33f,A33f,A33fw,a33fw,msm8916,msm8939
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-TARGET_VENDOR := Oppo
-PRODUCT_DEVICE := A37
-PRODUCT_NAME := lineage_A37
-BOARD_VENDOR := Oppo
-PRODUCT_BRAND := Oppo
+TARGET_VENDOR := OPPO
+PRODUCT_DEVICE := A33
+PRODUCT_NAME := lineage_A33
+BOARD_VENDOR := OPPO
+PRODUCT_BRAND := OPPO
 PRODUCT_MODEL := A37
-PRODUCT_MANUFACTURER := Oppo
+PRODUCT_MANUFACTURER := OPPO
+DEVICE_MAINTAINER := Hrx ( rvvishal )
 
 # Build fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="msm8916_64-user 5.1.1 LMY47V eng.root.20190711.032745 release-keys"
 
-BUILD_FINGERPRINT := OPPO/A37fw/A37f:5.1.1/LMY47V/1519717163:user/release-keys
+BUILD_FINGERPRINT := OPPO/A33fw/A33f:5.1.1/LMY47V/1519717163:user/release-keys
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
